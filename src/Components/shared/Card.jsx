@@ -2,9 +2,9 @@ import PropTypes from 'prop-types'
 
 const Card = ({ children, reverse }) => {
   return (
-    <div>
-      <p className={`card ${reverse && 'reverse'}`}>{children}</p>
-    </div>
+    <>
+      <div className={`card ${reverse && 'reverse'}`}>{children}</div>
+    </>
   )
 }
 
