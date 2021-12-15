@@ -4,6 +4,8 @@ import FeedbackData from './data/FeedbackData'
 
 // Hooks
 import { useState } from 'react'
+import FeedbackStats from './Components/FeedbackStats'
+import FeedbackForm from './Components/FeedbackForm'
 
 const App = () => {
   const [feedback, setFeedback] = useState(FeedbackData)
@@ -18,6 +20,8 @@ const App = () => {
     <>
       <Header text='Hello World' />
       <div className='container'>
+        <FeedbackForm />
+        <FeedbackStats feedback={feedback} />
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
     </>
